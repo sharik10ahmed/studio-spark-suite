@@ -114,6 +114,11 @@ export const IMAGE_LIBRARY: { key: ImageKey; label: string }[] = [
   { key: "g8", label: "Gallery — Feet in motion" },
   { key: "g9", label: "Gallery — Backstage" },
   { key: "g10", label: "Gallery — Cheering crowd" },
+  { key: "kidsCrew", label: "Studio photo — Kids crew stage act" },
+  { key: "kidClassical", label: "Studio photo — Young classical dancer" },
+  { key: "lavaniSolo", label: "Studio photo — Lavani solo performance" },
+  { key: "batchCelebration", label: "Studio photo — Batch celebration" },
+  { key: "womensBatch", label: "Studio photo — Women's batch group" },
 ];
 
 export const imageSrc = (key: string) => IMG[key as ImageKey] ?? IMG.hero;
