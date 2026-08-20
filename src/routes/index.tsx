@@ -62,7 +62,7 @@ function Home() {
         <div className="container-x grid items-center gap-14 lg:grid-cols-2">
           <Reveal className="relative">
             <img
-              src={IMG.about}
+              src={IMG.womensBatch}
               alt="Coach guiding a dance training session in the studio"
               className="w-full object-cover"
             />

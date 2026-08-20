@@ -29,6 +29,12 @@ import g7 from "@/assets/gal-7.jpg";
 import g8 from "@/assets/gal-8.jpg";
 import g9 from "@/assets/gal-9.jpg";
 import g10 from "@/assets/gal-10.jpg";
+import logoAsset from "@/assets/dmaker-logo.jpeg.asset.json";
+import kidsCrewAsset from "@/assets/kids-crew-stage.jpeg.asset.json";
+import kidClassicalAsset from "@/assets/kid-classical.jpeg.asset.json";
+import lavaniAsset from "@/assets/lavani-solo.jpeg.asset.json";
+import batchCelebrationAsset from "@/assets/studio-batch-celebration.jpeg.asset.json";
+import womensBatchAsset from "@/assets/womens-batch-group.jpeg.asset.json";
 
 /**
  * Every visual used on the site is registered here exactly once so that no
@@ -66,6 +72,12 @@ export const IMG = {
   g8,
   g9,
   g10,
+  logo: logoAsset.url,
+  kidsCrew: kidsCrewAsset.url,
+  kidClassical: kidClassicalAsset.url,
+  lavaniSolo: lavaniAsset.url,
+  batchCelebration: batchCelebrationAsset.url,
+  womensBatch: womensBatchAsset.url,
 } as const;
 
 export type ImageKey = keyof typeof IMG;
@@ -102,6 +114,11 @@ export const IMAGE_LIBRARY: { key: ImageKey; label: string }[] = [
   { key: "g8", label: "Gallery — Feet in motion" },
   { key: "g9", label: "Gallery — Backstage" },
   { key: "g10", label: "Gallery — Cheering crowd" },
+  { key: "kidsCrew", label: "Studio photo — Kids crew stage act" },
+  { key: "kidClassical", label: "Studio photo — Young classical dancer" },
+  { key: "lavaniSolo", label: "Studio photo — Lavani solo performance" },
+  { key: "batchCelebration", label: "Studio photo — Batch celebration" },
+  { key: "womensBatch", label: "Studio photo — Women's batch group" },
 ];
 
 export const imageSrc = (key: string) => IMG[key as ImageKey] ?? IMG.hero;
