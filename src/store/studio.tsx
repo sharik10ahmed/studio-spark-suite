@@ -95,6 +95,14 @@ export function StudioProvider({ children }: { children: ReactNode }) {
   const [settings, setSettings] = useState<Settings>(initialSettings);
   const [isAuthenticated, setAuthenticated] = useState(false);
 
+  // Restore the demo admin session after a refresh (session-only, no backend).
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.sessionStorage.getItem(AUTH_KEY) === "1") {
+      setAuthenticated(true);
+    }
+  }, []);
+
+
   const programs = useCollection<Program>(initialPrograms, ACTIVE);
   const fitness = useCollection<FitnessService>(initialFitness, ACTIVE);
   const choreography = useCollection<ChoreographyService>(initialChoreography, ACTIVE);
