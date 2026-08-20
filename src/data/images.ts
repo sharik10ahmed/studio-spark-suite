@@ -72,6 +72,12 @@ export const IMG = {
   g8,
   g9,
   g10,
+  logo: logoAsset.url,
+  kidsCrew: kidsCrewAsset.url,
+  kidClassical: kidClassicalAsset.url,
+  lavaniSolo: lavaniAsset.url,
+  batchCelebration: batchCelebrationAsset.url,
+  womensBatch: womensBatchAsset.url,
 } as const;
 
 export type ImageKey = keyof typeof IMG;
