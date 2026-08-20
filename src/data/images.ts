@@ -29,6 +29,12 @@ import g7 from "@/assets/gal-7.jpg";
 import g8 from "@/assets/gal-8.jpg";
 import g9 from "@/assets/gal-9.jpg";
 import g10 from "@/assets/gal-10.jpg";
+import logoAsset from "@/assets/dmaker-logo.jpeg.asset.json";
+import kidsCrewAsset from "@/assets/kids-crew-stage.jpeg.asset.json";
+import kidClassicalAsset from "@/assets/kid-classical.jpeg.asset.json";
+import lavaniAsset from "@/assets/lavani-solo.jpeg.asset.json";
+import batchCelebrationAsset from "@/assets/studio-batch-celebration.jpeg.asset.json";
+import womensBatchAsset from "@/assets/womens-batch-group.jpeg.asset.json";
 
 /**
  * Every visual used on the site is registered here exactly once so that no
