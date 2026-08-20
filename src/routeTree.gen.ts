@@ -19,6 +19,7 @@ import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as TestimonialsRouteImport } from './routes/testimonials'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
+import { Route as AdminChoreographyRouteImport } from './routes/admin.choreography'
 import { Route as AdminFitnessRouteImport } from './routes/admin.fitness'
 import { Route as AdminLoginRouteImport } from './routes/admin.login'
 import { Route as AdminProgramsRouteImport } from './routes/admin.programs'
@@ -73,6 +74,11 @@ const AdminIndexRoute = AdminIndexRouteImport.update({
   path: '/admin/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminChoreographyRoute = AdminChoreographyRouteImport.update({
+  id: '/admin/choreography',
+  path: '/admin/choreography',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminFitnessRoute = AdminFitnessRouteImport.update({
   id: '/admin/fitness',
   path: '/admin/fitness',
@@ -99,6 +105,7 @@ export interface FileRoutesByFullPath {
   '/gallery': typeof GalleryRoute
   '/programs': typeof ProgramsRoute
   '/testimonials': typeof TestimonialsRoute
+  '/admin/choreography': typeof AdminChoreographyRoute
   '/admin/fitness': typeof AdminFitnessRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/programs': typeof AdminProgramsRoute
@@ -114,6 +121,7 @@ export interface FileRoutesByTo {
   '/gallery': typeof GalleryRoute
   '/programs': typeof ProgramsRoute
   '/testimonials': typeof TestimonialsRoute
+  '/admin/choreography': typeof AdminChoreographyRoute
   '/admin/fitness': typeof AdminFitnessRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/programs': typeof AdminProgramsRoute
@@ -130,6 +138,7 @@ export interface FileRoutesById {
   '/gallery': typeof GalleryRoute
   '/programs': typeof ProgramsRoute
   '/testimonials': typeof TestimonialsRoute
+  '/admin/choreography': typeof AdminChoreographyRoute
   '/admin/fitness': typeof AdminFitnessRoute
   '/admin/login': typeof AdminLoginRoute
   '/admin/programs': typeof AdminProgramsRoute
@@ -147,6 +156,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/programs'
     | '/testimonials'
+    | '/admin/choreography'
     | '/admin/fitness'
     | '/admin/login'
     | '/admin/programs'
@@ -162,6 +172,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/programs'
     | '/testimonials'
+    | '/admin/choreography'
     | '/admin/fitness'
     | '/admin/login'
     | '/admin/programs'
@@ -177,6 +188,7 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/programs'
     | '/testimonials'
+    | '/admin/choreography'
     | '/admin/fitness'
     | '/admin/login'
     | '/admin/programs'
@@ -193,6 +205,7 @@ export interface RootRouteChildren {
   GalleryRoute: typeof GalleryRoute
   ProgramsRoute: typeof ProgramsRoute
   TestimonialsRoute: typeof TestimonialsRoute
+  AdminChoreographyRoute: typeof AdminChoreographyRoute
   AdminFitnessRoute: typeof AdminFitnessRoute
   AdminLoginRoute: typeof AdminLoginRoute
   AdminProgramsRoute: typeof AdminProgramsRoute
@@ -271,6 +284,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/choreography': {
+      id: '/admin/choreography'
+      path: '/admin/choreography'
+      fullPath: '/admin/choreography'
+      preLoaderRoute: typeof AdminChoreographyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/fitness': {
       id: '/admin/fitness'
       path: '/admin/fitness'
@@ -305,6 +325,7 @@ const rootRouteChildren: RootRouteChildren = {
   GalleryRoute: GalleryRoute,
   ProgramsRoute: ProgramsRoute,
   TestimonialsRoute: TestimonialsRoute,
+  AdminChoreographyRoute: AdminChoreographyRoute,
   AdminFitnessRoute: AdminFitnessRoute,
   AdminLoginRoute: AdminLoginRoute,
   AdminProgramsRoute: AdminProgramsRoute,
