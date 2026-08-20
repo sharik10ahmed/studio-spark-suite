@@ -20,6 +20,7 @@ import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as TestimonialsRouteImport } from './routes/testimonials'
 import { Route as AdminIndexRouteImport } from './routes/admin.index'
 import { Route as AdminChoreographyRouteImport } from './routes/admin.choreography'
+import { Route as AdminEnquiriesRouteImport } from './routes/admin.enquiries'
 import { Route as AdminEventsRouteImport } from './routes/admin.events'
 import { Route as AdminFitnessRouteImport } from './routes/admin.fitness'
 import { Route as AdminGalleryRouteImport } from './routes/admin.gallery'
@@ -82,6 +83,11 @@ const AdminChoreographyRoute = AdminChoreographyRouteImport.update({
   path: '/admin/choreography',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminEnquiriesRoute = AdminEnquiriesRouteImport.update({
+  id: '/admin/enquiries',
+  path: '/admin/enquiries',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminEventsRoute = AdminEventsRouteImport.update({
   id: '/admin/events',
   path: '/admin/events',
@@ -124,6 +130,7 @@ export interface FileRoutesByFullPath {
   '/programs': typeof ProgramsRoute
   '/testimonials': typeof TestimonialsRoute
   '/admin/choreography': typeof AdminChoreographyRoute
+  '/admin/enquiries': typeof AdminEnquiriesRoute
   '/admin/events': typeof AdminEventsRoute
   '/admin/fitness': typeof AdminFitnessRoute
   '/admin/gallery': typeof AdminGalleryRoute
@@ -143,6 +150,7 @@ export interface FileRoutesByTo {
   '/programs': typeof ProgramsRoute
   '/testimonials': typeof TestimonialsRoute
   '/admin/choreography': typeof AdminChoreographyRoute
+  '/admin/enquiries': typeof AdminEnquiriesRoute
   '/admin/events': typeof AdminEventsRoute
   '/admin/fitness': typeof AdminFitnessRoute
   '/admin/gallery': typeof AdminGalleryRoute
@@ -163,6 +171,7 @@ export interface FileRoutesById {
   '/programs': typeof ProgramsRoute
   '/testimonials': typeof TestimonialsRoute
   '/admin/choreography': typeof AdminChoreographyRoute
+  '/admin/enquiries': typeof AdminEnquiriesRoute
   '/admin/events': typeof AdminEventsRoute
   '/admin/fitness': typeof AdminFitnessRoute
   '/admin/gallery': typeof AdminGalleryRoute
@@ -184,6 +193,7 @@ export interface FileRouteTypes {
     | '/programs'
     | '/testimonials'
     | '/admin/choreography'
+    | '/admin/enquiries'
     | '/admin/events'
     | '/admin/fitness'
     | '/admin/gallery'
@@ -203,6 +213,7 @@ export interface FileRouteTypes {
     | '/programs'
     | '/testimonials'
     | '/admin/choreography'
+    | '/admin/enquiries'
     | '/admin/events'
     | '/admin/fitness'
     | '/admin/gallery'
@@ -222,6 +233,7 @@ export interface FileRouteTypes {
     | '/programs'
     | '/testimonials'
     | '/admin/choreography'
+    | '/admin/enquiries'
     | '/admin/events'
     | '/admin/fitness'
     | '/admin/gallery'
@@ -242,6 +254,7 @@ export interface RootRouteChildren {
   ProgramsRoute: typeof ProgramsRoute
   TestimonialsRoute: typeof TestimonialsRoute
   AdminChoreographyRoute: typeof AdminChoreographyRoute
+  AdminEnquiriesRoute: typeof AdminEnquiriesRoute
   AdminEventsRoute: typeof AdminEventsRoute
   AdminFitnessRoute: typeof AdminFitnessRoute
   AdminGalleryRoute: typeof AdminGalleryRoute
@@ -330,6 +343,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminChoreographyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/enquiries': {
+      id: '/admin/enquiries'
+      path: '/admin/enquiries'
+      fullPath: '/admin/enquiries'
+      preLoaderRoute: typeof AdminEnquiriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/events': {
       id: '/admin/events'
       path: '/admin/events'
@@ -386,6 +406,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProgramsRoute: ProgramsRoute,
   TestimonialsRoute: TestimonialsRoute,
   AdminChoreographyRoute: AdminChoreographyRoute,
+  AdminEnquiriesRoute: AdminEnquiriesRoute,
   AdminEventsRoute: AdminEventsRoute,
   AdminFitnessRoute: AdminFitnessRoute,
   AdminGalleryRoute: AdminGalleryRoute,
