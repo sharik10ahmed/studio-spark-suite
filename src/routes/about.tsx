@@ -64,7 +64,7 @@ function AboutPage() {
         <div className="container-x grid items-center gap-14 lg:grid-cols-2">
           <Reveal>
             <img
-              src={IMG.about}
+              src={IMG.batchCelebration}
               alt="Instructor coaching a dance training session at D Maker studio"
               className="w-full object-cover"
             />
