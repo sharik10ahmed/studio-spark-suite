@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Icon } from "@/components/ui/Icon";
+import { IMG } from "@/data/images";
 import { useStudio } from "@/store/studio";
 
 const QUICK = [
@@ -31,9 +32,11 @@ export function Footer() {
       <div className="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center bg-primary font-display text-xl text-primary-foreground">
-              D
-            </span>
+            <img
+              src={IMG.logo}
+              alt="D Maker Dance & Fitness Studio logo"
+              className="h-11 w-11 rounded-full object-cover"
+            />
             <span className="font-display text-lg tracking-wide text-white">
               {settings.businessName}
             </span>

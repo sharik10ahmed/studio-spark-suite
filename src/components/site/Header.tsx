@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Icon } from "@/components/ui/Icon";
+import { IMG } from "@/data/images";
 import { LinkButton } from "@/components/ui/ActionButton";
 import { useStudio } from "@/store/studio";
 import { cn } from "@/lib/utils";
@@ -46,9 +47,11 @@ export function Header() {
     >
       <div className="container-x flex items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="grid h-10 w-10 place-items-center bg-primary text-primary-foreground font-display text-xl">
-            D
-          </span>
+          <img
+            src={IMG.logo}
+            alt="D Maker Dance & Fitness Studio logo"
+            className="h-11 w-11 rounded-full object-cover"
+          />
           <span className="leading-tight">
             <span className="block font-display text-lg tracking-wide text-ink">D MAKER</span>
             <span className="block text-[10px] font-semibold uppercase tracking-[0.28em] text-muted-foreground">

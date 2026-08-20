@@ -292,6 +292,11 @@ export const initialGallery: GalleryItem[] = [
   { id: "g8", title: "Footwork Drill", category: "Training", image: "g8", order: 8, status: "active" },
   { id: "g9", title: "Backstage Minutes", category: "Events", image: "g9", order: 9, status: "active" },
   { id: "g10", title: "Showcase Night", category: "Events", image: "g10", order: 10, status: "active" },
+  { id: "g11", title: "Kids Crew Stage Act", category: "Performances", image: "kidsCrew", order: 11, status: "active" },
+  { id: "g12", title: "Young Classical Dancer", category: "Dance", image: "kidClassical", order: 12, status: "active" },
+  { id: "g13", title: "Lavani Solo", category: "Performances", image: "lavaniSolo", order: 13, status: "active" },
+  { id: "g14", title: "Batch Celebration", category: "Events", image: "batchCelebration", order: 14, status: "active" },
+  { id: "g15", title: "Women's Batch", category: "Training", image: "womensBatch", order: 15, status: "active" },
 ];
 
 export const initialEvents: StudioEvent[] = [
