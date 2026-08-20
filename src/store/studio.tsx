@@ -2,6 +2,7 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useState,
   type ReactNode,
@@ -33,6 +34,8 @@ export type Collection<T extends { id: string }> = {
   remove: (id: string) => void;
   toggle: (id: string) => void;
 };
+
+const AUTH_KEY = "dmaker-admin-session";
 
 const uid = () => Math.random().toString(36).slice(2, 9);
 
@@ -134,11 +137,17 @@ export function StudioProvider({ children }: { children: ReactNode }) {
     const ok =
       email.trim().toLowerCase() === ADMIN_CREDENTIALS.email &&
       password === ADMIN_CREDENTIALS.password;
-    if (ok) setAuthenticated(true);
+    if (ok) {
+      setAuthenticated(true);
+      if (typeof window !== "undefined") window.sessionStorage.setItem(AUTH_KEY, "1");
+    }
     return ok;
   }, []);
 
-  const logout = useCallback(() => setAuthenticated(false), []);
+  const logout = useCallback(() => {
+    setAuthenticated(false);
+    if (typeof window !== "undefined") window.sessionStorage.removeItem(AUTH_KEY);
+  }, []);
 
   const value = useMemo<StudioContextValue>(
     () => ({
