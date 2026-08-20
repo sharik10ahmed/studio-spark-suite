@@ -10,33 +10,271 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ChoreographyRouteImport } from './routes/choreography'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as EventsRouteImport } from './routes/events'
+import { Route as FitnessRouteImport } from './routes/fitness'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as ProgramsRouteImport } from './routes/programs'
+import { Route as TestimonialsRouteImport } from './routes/testimonials'
+import { Route as AdminIndexRouteImport } from './routes/admin.index'
+import { Route as AdminChoreographyRouteImport } from './routes/admin.choreography'
+import { Route as AdminEnquiriesRouteImport } from './routes/admin.enquiries'
+import { Route as AdminEventsRouteImport } from './routes/admin.events'
+import { Route as AdminFitnessRouteImport } from './routes/admin.fitness'
+import { Route as AdminGalleryRouteImport } from './routes/admin.gallery'
+import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as AdminProgramsRouteImport } from './routes/admin.programs'
+import { Route as AdminSettingsRouteImport } from './routes/admin.settings'
+import { Route as AdminTestimonialsRouteImport } from './routes/admin.testimonials'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChoreographyRoute = ChoreographyRouteImport.update({
+  id: '/choreography',
+  path: '/choreography',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FitnessRoute = FitnessRouteImport.update({
+  id: '/fitness',
+  path: '/fitness',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProgramsRoute = ProgramsRouteImport.update({
+  id: '/programs',
+  path: '/programs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TestimonialsRoute = TestimonialsRouteImport.update({
+  id: '/testimonials',
+  path: '/testimonials',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminIndexRoute = AdminIndexRouteImport.update({
+  id: '/admin/',
+  path: '/admin/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminChoreographyRoute = AdminChoreographyRouteImport.update({
+  id: '/admin/choreography',
+  path: '/admin/choreography',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminEnquiriesRoute = AdminEnquiriesRouteImport.update({
+  id: '/admin/enquiries',
+  path: '/admin/enquiries',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminEventsRoute = AdminEventsRouteImport.update({
+  id: '/admin/events',
+  path: '/admin/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminFitnessRoute = AdminFitnessRouteImport.update({
+  id: '/admin/fitness',
+  path: '/admin/fitness',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminGalleryRoute = AdminGalleryRouteImport.update({
+  id: '/admin/gallery',
+  path: '/admin/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminLoginRoute = AdminLoginRouteImport.update({
+  id: '/admin/login',
+  path: '/admin/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminProgramsRoute = AdminProgramsRouteImport.update({
+  id: '/admin/programs',
+  path: '/admin/programs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSettingsRoute = AdminSettingsRouteImport.update({
+  id: '/admin/settings',
+  path: '/admin/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminTestimonialsRoute = AdminTestimonialsRouteImport.update({
+  id: '/admin/testimonials',
+  path: '/admin/testimonials',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/choreography': typeof ChoreographyRoute
+  '/contact': typeof ContactRoute
+  '/events': typeof EventsRoute
+  '/fitness': typeof FitnessRoute
+  '/gallery': typeof GalleryRoute
+  '/programs': typeof ProgramsRoute
+  '/testimonials': typeof TestimonialsRoute
+  '/admin/choreography': typeof AdminChoreographyRoute
+  '/admin/enquiries': typeof AdminEnquiriesRoute
+  '/admin/events': typeof AdminEventsRoute
+  '/admin/fitness': typeof AdminFitnessRoute
+  '/admin/gallery': typeof AdminGalleryRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/programs': typeof AdminProgramsRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/testimonials': typeof AdminTestimonialsRoute
+  '/admin/': typeof AdminIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/choreography': typeof ChoreographyRoute
+  '/contact': typeof ContactRoute
+  '/events': typeof EventsRoute
+  '/fitness': typeof FitnessRoute
+  '/gallery': typeof GalleryRoute
+  '/programs': typeof ProgramsRoute
+  '/testimonials': typeof TestimonialsRoute
+  '/admin/choreography': typeof AdminChoreographyRoute
+  '/admin/enquiries': typeof AdminEnquiriesRoute
+  '/admin/events': typeof AdminEventsRoute
+  '/admin/fitness': typeof AdminFitnessRoute
+  '/admin/gallery': typeof AdminGalleryRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/programs': typeof AdminProgramsRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/testimonials': typeof AdminTestimonialsRoute
+  '/admin': typeof AdminIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/choreography': typeof ChoreographyRoute
+  '/contact': typeof ContactRoute
+  '/events': typeof EventsRoute
+  '/fitness': typeof FitnessRoute
+  '/gallery': typeof GalleryRoute
+  '/programs': typeof ProgramsRoute
+  '/testimonials': typeof TestimonialsRoute
+  '/admin/choreography': typeof AdminChoreographyRoute
+  '/admin/enquiries': typeof AdminEnquiriesRoute
+  '/admin/events': typeof AdminEventsRoute
+  '/admin/fitness': typeof AdminFitnessRoute
+  '/admin/gallery': typeof AdminGalleryRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/programs': typeof AdminProgramsRoute
+  '/admin/settings': typeof AdminSettingsRoute
+  '/admin/testimonials': typeof AdminTestimonialsRoute
+  '/admin/': typeof AdminIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/choreography'
+    | '/contact'
+    | '/events'
+    | '/fitness'
+    | '/gallery'
+    | '/programs'
+    | '/testimonials'
+    | '/admin/choreography'
+    | '/admin/enquiries'
+    | '/admin/events'
+    | '/admin/fitness'
+    | '/admin/gallery'
+    | '/admin/login'
+    | '/admin/programs'
+    | '/admin/settings'
+    | '/admin/testimonials'
+    | '/admin/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/choreography'
+    | '/contact'
+    | '/events'
+    | '/fitness'
+    | '/gallery'
+    | '/programs'
+    | '/testimonials'
+    | '/admin/choreography'
+    | '/admin/enquiries'
+    | '/admin/events'
+    | '/admin/fitness'
+    | '/admin/gallery'
+    | '/admin/login'
+    | '/admin/programs'
+    | '/admin/settings'
+    | '/admin/testimonials'
+    | '/admin'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/choreography'
+    | '/contact'
+    | '/events'
+    | '/fitness'
+    | '/gallery'
+    | '/programs'
+    | '/testimonials'
+    | '/admin/choreography'
+    | '/admin/enquiries'
+    | '/admin/events'
+    | '/admin/fitness'
+    | '/admin/gallery'
+    | '/admin/login'
+    | '/admin/programs'
+    | '/admin/settings'
+    | '/admin/testimonials'
+    | '/admin/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ChoreographyRoute: typeof ChoreographyRoute
+  ContactRoute: typeof ContactRoute
+  EventsRoute: typeof EventsRoute
+  FitnessRoute: typeof FitnessRoute
+  GalleryRoute: typeof GalleryRoute
+  ProgramsRoute: typeof ProgramsRoute
+  TestimonialsRoute: typeof TestimonialsRoute
+  AdminChoreographyRoute: typeof AdminChoreographyRoute
+  AdminEnquiriesRoute: typeof AdminEnquiriesRoute
+  AdminEventsRoute: typeof AdminEventsRoute
+  AdminFitnessRoute: typeof AdminFitnessRoute
+  AdminGalleryRoute: typeof AdminGalleryRoute
+  AdminLoginRoute: typeof AdminLoginRoute
+  AdminProgramsRoute: typeof AdminProgramsRoute
+  AdminSettingsRoute: typeof AdminSettingsRoute
+  AdminTestimonialsRoute: typeof AdminTestimonialsRoute
+  AdminIndexRoute: typeof AdminIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +286,155 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/choreography': {
+      id: '/choreography'
+      path: '/choreography'
+      fullPath: '/choreography'
+      preLoaderRoute: typeof ChoreographyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fitness': {
+      id: '/fitness'
+      path: '/fitness'
+      fullPath: '/fitness'
+      preLoaderRoute: typeof FitnessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/programs': {
+      id: '/programs'
+      path: '/programs'
+      fullPath: '/programs'
+      preLoaderRoute: typeof ProgramsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/testimonials': {
+      id: '/testimonials'
+      path: '/testimonials'
+      fullPath: '/testimonials'
+      preLoaderRoute: typeof TestimonialsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/': {
+      id: '/admin/'
+      path: '/admin'
+      fullPath: '/admin/'
+      preLoaderRoute: typeof AdminIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/choreography': {
+      id: '/admin/choreography'
+      path: '/admin/choreography'
+      fullPath: '/admin/choreography'
+      preLoaderRoute: typeof AdminChoreographyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/enquiries': {
+      id: '/admin/enquiries'
+      path: '/admin/enquiries'
+      fullPath: '/admin/enquiries'
+      preLoaderRoute: typeof AdminEnquiriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/events': {
+      id: '/admin/events'
+      path: '/admin/events'
+      fullPath: '/admin/events'
+      preLoaderRoute: typeof AdminEventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/fitness': {
+      id: '/admin/fitness'
+      path: '/admin/fitness'
+      fullPath: '/admin/fitness'
+      preLoaderRoute: typeof AdminFitnessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/gallery': {
+      id: '/admin/gallery'
+      path: '/admin/gallery'
+      fullPath: '/admin/gallery'
+      preLoaderRoute: typeof AdminGalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/login': {
+      id: '/admin/login'
+      path: '/admin/login'
+      fullPath: '/admin/login'
+      preLoaderRoute: typeof AdminLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/programs': {
+      id: '/admin/programs'
+      path: '/admin/programs'
+      fullPath: '/admin/programs'
+      preLoaderRoute: typeof AdminProgramsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/settings': {
+      id: '/admin/settings'
+      path: '/admin/settings'
+      fullPath: '/admin/settings'
+      preLoaderRoute: typeof AdminSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/testimonials': {
+      id: '/admin/testimonials'
+      path: '/admin/testimonials'
+      fullPath: '/admin/testimonials'
+      preLoaderRoute: typeof AdminTestimonialsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ChoreographyRoute: ChoreographyRoute,
+  ContactRoute: ContactRoute,
+  EventsRoute: EventsRoute,
+  FitnessRoute: FitnessRoute,
+  GalleryRoute: GalleryRoute,
+  ProgramsRoute: ProgramsRoute,
+  TestimonialsRoute: TestimonialsRoute,
+  AdminChoreographyRoute: AdminChoreographyRoute,
+  AdminEnquiriesRoute: AdminEnquiriesRoute,
+  AdminEventsRoute: AdminEventsRoute,
+  AdminFitnessRoute: AdminFitnessRoute,
+  AdminGalleryRoute: AdminGalleryRoute,
+  AdminLoginRoute: AdminLoginRoute,
+  AdminProgramsRoute: AdminProgramsRoute,
+  AdminSettingsRoute: AdminSettingsRoute,
+  AdminTestimonialsRoute: AdminTestimonialsRoute,
+  AdminIndexRoute: AdminIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
