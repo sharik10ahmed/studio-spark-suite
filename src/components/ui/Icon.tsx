@@ -20,7 +20,9 @@ const paths: Record<string, string> = {
   sparkles: "M12 3v6M9 6h6M6 13v5M4 15.5h4M16 12l1.5 3.5L21 17l-3.5 1.5L16 22l-1.5-3.5L11 17l3.5-1.5z",
   image: "M3 5h18v14H3zM3 15l5-5 4 4 3-3 6 6",
   calendar: "M4 6h16v14H4zM8 3v4M16 3v4M4 11h16",
-  quote: "M9 7H5v5h4v5H4M20 7h-4v5h4v5h-5",
+  quote:
+    "M10 6H5a2 2 0 00-2 2v3a2 2 0 002 2h3v1a3 3 0 01-3 3M21 6h-5a2 2 0 00-2 2v3a2 2 0 002 2h3v1a3 3 0 01-3 3",
+
   inbox: "M3 13l3-9h12l3 9v7H3zM3 13h5l1 3h6l1-3h5",
   settings:
     "M12 15a3 3 0 100-6 3 3 0 000 6zM4 12l-1.5-.9 1.2-3 1.7.4M20 12l1.5-.9-1.2-3-1.7.4M12 4V2h0M12 20v2",
